@@ -1,29 +1,25 @@
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
 public class Pop extends GameObject {
 
-    private int angle = 0, moveXDirection, moveYDirection, speed;
-    private boolean collides;
+    private double angle = 90, moveXDirection, moveYDirection, speed, directionX = 1, directionY = 1;
 
     public Pop (int x, int y, BufferedImage img) {
 
         super (img, x, y);
-
-        this.angle = angle;
         speed = 1;
-        moveXDirection = (int) Math.round(speed * Math.cos(Math.toRadians(angle)));
-        moveYDirection = (int) Math.round(speed * Math.sin(Math.toRadians(angle)));
     }
 
     public void update() {
 
-        moveXDirection = (int) Math.round(speed * Math.cos(Math.toRadians(angle)));
-        moveYDirection = (int) Math.round(speed * Math.sin(Math.toRadians(angle)));
+        moveXDirection = (double) Math.round(speed * Math.cos(Math.toRadians(angle)));
+        moveYDirection = (double) Math.round(speed * Math.sin(Math.toRadians(angle)));
 
-        x += moveXDirection;
-        y += moveYDirection;
+        x += directionX * moveXDirection;
+        y += directionY * moveYDirection;
     }
 
     public Rectangle getRectangle () {
@@ -31,16 +27,41 @@ public class Pop extends GameObject {
         return new Rectangle(x, y, width, height);
     }
 
-    public void handleCollision(){
+    public void reverseX () {
 
-        System.out.println("hit");
-        this.angle =+ 180;
+        directionX = directionX * -1;
+
+    }
+
+    public void reverseY () {
+
+         directionY = directionY * -1;
+
+    }
+    public double getAngle () {
+
+        return this.angle;
+    }
+
+    public void handleCollisionY() {
+
+        reverseY();
+    }
+
+    public void handleCollisionX() {
+
+        reverseX();
+    }
+
+    public void handleCollisionKatch(double angle){
+
+        Rectangle2D.Double popRec = new Rectangle2D.Double();
+        directionY = 1;
+        directionX = 1;
+        this.angle = angle;
     }
 
     public void draw(Graphics2D g2) {
-
-        AffineTransform rotation = AffineTransform.getTranslateInstance(x, y);
-        rotation.rotate(Math.toRadians(angle), 0, 0);
-        g2.drawImage(this.img, rotation, null);
+        g2.drawImage(img, x, y, null);
     }
 }

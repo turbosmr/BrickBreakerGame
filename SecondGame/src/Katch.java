@@ -82,6 +82,11 @@ private boolean LeftPressed;
         }
     }
 
+    public Rectangle getRectangle () {
+
+        return new Rectangle(x, y, width, height);
+    }
+
     void draw(Graphics g) {
 
         AffineTransform rotation = AffineTransform.getTranslateInstance(x, y);

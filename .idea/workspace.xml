@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SecondGame/SecondGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/Blocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/Katch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/KatchControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/Pop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/Bigleg_small.gif" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/Bigleg_small.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/src/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/src/Katch.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/Katch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/src/Pop.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/Pop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SecondGame/Katch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SecondGame/Katch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SecondGame/Pop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SecondGame/Pop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SecondGame/SecondGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SecondGame/SecondGame.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,23 +49,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3342" />
+          <entry key="java" value="6243" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3342" />
+          <entry key="JAVA" value="6243" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="138" column="9" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
+            <state relative-caret-position="2745">
+              <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,13 +73,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Pop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="125">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1307#1308#0" expanded="true" />
+                <element signature="e#1352#1353#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Katch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="1212">
+              <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#824#825#0" expanded="true" />
@@ -117,11 +122,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Blocks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="30">
+              <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
               <folding>
                 <element signature="e#414#415#0" expanded="true" />
                 <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
                 <element signature="e#549#550#0" expanded="true" />
               </folding>
             </state>
@@ -131,8 +137,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="405">
+              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,6 +158,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>SecondGame</find>
+      <find>handle</find>
+      <find>check</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/SecondGame/Resources</dir>
@@ -174,14 +185,14 @@
       <list>
         <option value="$PROJECT_DIR$/SecondGame/src/SenconGame.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/SencondGame.java" />
-        <option value="$PROJECT_DIR$/SecondGame/src/GameObject.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/PopControl.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/SuperRainbowReef.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/KatchControl.java" />
-        <option value="$PROJECT_DIR$/SecondGame/src/Katch.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/Blocks.java" />
-        <option value="$PROJECT_DIR$/SecondGame/src/SecondGame.java" />
+        <option value="$PROJECT_DIR$/SecondGame/src/GameObject.java" />
+        <option value="$PROJECT_DIR$/SecondGame/src/Katch.java" />
         <option value="$PROJECT_DIR$/SecondGame/src/Pop.java" />
+        <option value="$PROJECT_DIR$/SecondGame/src/SecondGame.java" />
       </list>
     </option>
   </component>
@@ -191,9 +202,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="17" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="29" />
+    <option name="y" value="67" />
     <option name="width" value="1400" />
     <option name="height" value="784" />
   </component>
@@ -232,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543274907593" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543542221454" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -301,18 +312,18 @@
       <updated>1542681485998</updated>
       <workItem from="1542681490220" duration="6451000" />
       <workItem from="1542698298511" duration="12480000" />
-      <workItem from="1542746845610" duration="22033000" />
+      <workItem from="1542746845610" duration="52227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40964000" />
+    <option name="totallyTimeSpent" value="71158000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="23" width="1400" height="784" extended-state="1" />
+    <frame x="29" y="67" width="1400" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21649484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13107511" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -330,7 +341,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32803467" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -381,10 +392,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SecondGame/src/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding>
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SecondGame/src/Katch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="1212">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
@@ -401,27 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SecondGame/src/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SecondGame/src/Blocks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="138" column="9" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -430,8 +435,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SecondGame/src/Pop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="125">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2745">
+          <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -12,7 +12,7 @@ public class SecondGame extends JPanel {
 
     private JFrame jf;
     public static final int screenWidth = 640, screenHeight = 500;
-    private BufferedImage background, world, katchImg, popImg;
+    private BufferedImage background, world, katchImg, popImg, bigleg;
     private Graphics2D buffer, g2;
     private InputStream blockMap;
     private BufferedReader bufferReader;
@@ -22,7 +22,8 @@ public class SecondGame extends JPanel {
     private Katch katch;
     private KatchControl katchControl;
     private Pop pop;
-    private Rectangle popRec, blocksRec;
+    private Rectangle popRec, blocksRec, katchRec, boarderLeft, boarderRight, boarderTop;
+    private int score = 0, totalScore = 0;
 
     public void init() {
 
@@ -38,6 +39,7 @@ public class SecondGame extends JPanel {
             blockImg2 = read(new File("Resources/Block2.gif"));
             blockImg3 = read(new File("Resources/Block3.gif"));
             katchImg = read(new File("Resources/Katch1.gif"));
+            bigleg = read(new File("Resources/Bigleg_small.gif"));
             popImg = read(new File("Resources/Pop1.gif"));
             blockMap = new FileInputStream("Resources/BlockMap.txt");
             bufferReader = new BufferedReader(new InputStreamReader(blockMap));
@@ -50,7 +52,7 @@ public class SecondGame extends JPanel {
         katch = new Katch(320-40, 450, 0, 0, 0, katchImg);
         katchControl = new KatchControl(katch, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT);
 
-        pop = new Pop(320-16, 400, popImg);
+        pop = new Pop(320-16, 300, popImg);
 
         this.jf.setLayout(new BorderLayout());
         this.jf.add(this);
@@ -72,6 +74,10 @@ public class SecondGame extends JPanel {
         drawBlocks();
         katch.draw(buffer);
         pop.draw(buffer);
+
+        g2.setColor(Color.white);
+        g2.setFont(new Font("", Font.PLAIN, 20));
+        g2.drawString("Score: "+ getScore(),screenWidth-580,screenHeight-40);
     }
 
     public void drawBackGround(Graphics2D buffer) {
@@ -103,8 +109,8 @@ public class SecondGame extends JPanel {
                                 j * blockImg2.getHeight(null), 2));
                     }
                     else if (input.charAt(i) == '4') {
-                        blocks.add(new Blocks(blockImg3, i * blockImg3.getWidth(null),
-                                j * blockImg3.getHeight(null), 3));
+                        blocks.add(new Blocks(bigleg, i * bigleg.getWidth(null),
+                                j * blockImg2.getHeight(null), 3));
                     }
                 }
                 j++;
@@ -124,17 +130,61 @@ public class SecondGame extends JPanel {
         }
     }
 
+    public int getScore() {
+
+        return score + totalScore;
+    }
+
+    public Rectangle GetBoarderLeft(){
+
+        return new Rectangle(0, 0, 42, 500);
+    }
+    public Rectangle GetBoarderRight(){
+
+        return new Rectangle(screenWidth-42, 0, 42, 500);
+    }
+    public Rectangle getBoarderTop() {
+
+        return new Rectangle(0, 0, 640, 24);
+    }
+
     public void checkCollisions() {
 
         popRec = pop.getRectangle();
+        katchRec = katch.getRectangle();
+        boarderLeft = GetBoarderLeft();
+        boarderRight = GetBoarderRight();
+        boarderTop = getBoarderTop();
+
+        if (popRec.intersects(katchRec)){
+
+            if (pop.getX()+ pop.width/2 < katch.getX() + katch.width/2-15) {
+                pop.handleCollisionKatch(240);
+            }
+            else if (pop.getX()+ pop.width/2 > katch.getX() + katch.width/2+15) {
+                pop.handleCollisionKatch(300);
+            }
+            else
+                pop.handleCollisionKatch(270);
+        }
+
+        if (popRec.intersects(boarderLeft)||
+            popRec.intersects(boarderRight)) {
+
+            pop.handleCollisionX();
+        }
+        if (popRec.intersects(boarderTop)){
+            pop.handleCollisionY();
+        }
 
         for (int i = 0; i <= blocks.size()-1; i++) {
             blocksRec = blocks.get(i).getRectangle();
 
-
             if (popRec.intersects(blocksRec)) {
-
-                pop.handleCollision();
+                
+                blocks.remove(i);
+                score += 100;
+                pop.handleCollisionY();
             }
         }
     }
