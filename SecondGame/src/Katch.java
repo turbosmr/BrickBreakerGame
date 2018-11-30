@@ -1,18 +1,19 @@
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
 public class Katch extends GameObject{
 
-private int vx;
-private int vy;
-private int angle;
-private final int R = 2;
+private double vx;
+private double vy;
+private double angle;
+private final double R = 2;
 private BufferedImage img;
 private boolean RightPressed;
 private boolean LeftPressed;
 
-    public Katch (int x, int y, int vx, int vy, int angle, BufferedImage img) {
+    public Katch (double x, double y, double vx, double vy, double angle, BufferedImage img) {
 
         super(img, x, y);
         this.vx = vx;
@@ -50,8 +51,8 @@ private boolean LeftPressed;
 
     private void moveRight() {
 
-        vx = (int) Math.round(R * Math.cos(Math.toRadians(angle)));
-        vy = (int) Math.round(R * Math.sin(Math.toRadians(angle)));
+        vx = (R * Math.cos(Math.toRadians(angle)));
+        vy = (R * Math.sin(Math.toRadians(angle)));
         x -= vx;
         y -= vy;
         checkBorder();
@@ -59,8 +60,8 @@ private boolean LeftPressed;
 
     private void moveLeft() {
 
-        vx = (int) Math.round(R * Math.cos(Math.toRadians(angle)));
-        vy = (int) Math.round(R * Math.sin(Math.toRadians(angle)));
+        vx = (R * Math.cos(Math.toRadians(angle)));
+        vy = (R * Math.sin(Math.toRadians(angle)));
         x += vx;
         y += vy;
         checkBorder();
@@ -82,9 +83,9 @@ private boolean LeftPressed;
         }
     }
 
-    public Rectangle getRectangle () {
+    public Rectangle2D.Double getRectangle () {
 
-        return new Rectangle(x, y, width, height);
+        return new Rectangle2D.Double(x, y, width, height);
     }
 
     void draw(Graphics g) {

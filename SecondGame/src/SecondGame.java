@@ -2,6 +2,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class SecondGame extends JPanel {
     public static final int screenWidth = 640, screenHeight = 500;
     private BufferedImage background, world, katchImg, popImg, bigleg;
     private Graphics2D buffer, g2;
-    private InputStream blockMap;
+    private InputStream blockMap, blockMap2;
     private BufferedReader bufferReader;
     private String input;
     private Image wallImg, blockSolid, blockImg1, blockImg2, blockImg3;
@@ -22,8 +23,14 @@ public class SecondGame extends JPanel {
     private Katch katch;
     private KatchControl katchControl;
     private Pop pop;
-    private Rectangle popRec, blocksRec, katchRec, boarderLeft, boarderRight, boarderTop;
-    private int score = 0, totalScore = 0;
+    private Rectangle2D.Double popRec;
+    private Rectangle2D.Double blocksRec;
+    private Rectangle2D.Double katchRec;
+    private Rectangle boarderLeft;
+    private Rectangle boarderRight;
+    private Rectangle boarderTop;
+    private int score = 0, totalScore = 0, lives = 3, level = 3;
+    private boolean endGame = false;
 
     public void init() {
 
@@ -42,6 +49,7 @@ public class SecondGame extends JPanel {
             bigleg = read(new File("Resources/Bigleg_small.gif"));
             popImg = read(new File("Resources/Pop1.gif"));
             blockMap = new FileInputStream("Resources/BlockMap.txt");
+            blockMap2 = new FileInputStream("Resources/BlockMap2.txt");
             bufferReader = new BufferedReader(new InputStreamReader(blockMap));
             input = bufferReader.readLine();
             blockMaker();
@@ -51,15 +59,14 @@ public class SecondGame extends JPanel {
         }
         katch = new Katch(320-40, 450, 0, 0, 0, katchImg);
         katchControl = new KatchControl(katch, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT);
-
-        pop = new Pop(320-16, 300, popImg);
+        pop = new Pop(320-16, 250, popImg);
 
         this.jf.setLayout(new BorderLayout());
         this.jf.add(this);
         this.jf.addKeyListener(katchControl);
         this.jf.setSize(background.getWidth(), background.getHeight()+30);
         this.jf.setResizable(false);
-        jf.setLocationRelativeTo(null);
+        this.jf.setLocationRelativeTo(null);
         this.jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.jf.setVisible(true);
     }
@@ -70,14 +77,16 @@ public class SecondGame extends JPanel {
         g2.drawImage(world, 0, 0, this);
         buffer = world.createGraphics();
 
-        drawBackGround(buffer);
-        drawBlocks();
-        katch.draw(buffer);
-        pop.draw(buffer);
-
         g2.setColor(Color.white);
         g2.setFont(new Font("", Font.PLAIN, 20));
         g2.drawString("Score: "+ getScore(),screenWidth-580,screenHeight-40);
+        g2.drawString("lives: "+ getLives(),screenWidth-150,screenHeight-40);
+
+        drawBackGround(buffer);
+        drawBlocks();
+
+        katch.draw(buffer);
+        pop.draw(buffer);
     }
 
     public void drawBackGround(Graphics2D buffer) {
@@ -102,7 +111,7 @@ public class SecondGame extends JPanel {
                     }
                     if (input.charAt(i) == '2') {
                         blocks.add(new Blocks(blockImg1, i * blockSolid.getWidth(null),
-                                j * blockSolid.getHeight(null), 1));
+                                j * blockSolid.getHeight(null), 2));
                     }
                     if (input.charAt(i) == '3') {
                         blocks.add(new Blocks(blockImg2, i * blockImg2.getWidth(null),
@@ -134,6 +143,30 @@ public class SecondGame extends JPanel {
 
         return score + totalScore;
     }
+    public int getLives () {
+
+        if (pop.getY() > 630){
+
+            lives--;
+            pop.Respawn();
+
+        }
+        if (lives == 0) {
+
+            g2.setColor(Color.black);
+            g2.setFont(new Font("", Font.PLAIN, 60));
+            g2.drawString("Game Over", screenWidth/2-150, screenHeight/2);
+            g2.setColor(Color.white);
+            g2.setFont(new Font("", Font.PLAIN, 60));
+            g2.drawString("Game Over", screenWidth/2-148, screenHeight/2-2);
+            g2.setFont(new Font("", Font.PLAIN, 20));
+            endGame = true;
+        }
+        return lives;
+    }
+    public boolean isEndGame() {
+        return endGame;
+    }
 
     public Rectangle GetBoarderLeft(){
 
@@ -156,24 +189,32 @@ public class SecondGame extends JPanel {
         boarderRight = GetBoarderRight();
         boarderTop = getBoarderTop();
 
-        if (popRec.intersects(katchRec)){
+        if (popRec.intersects(katchRec.x, katchRec.y, katchRec.width, katchRec.height)){
 
-            if (pop.getX()+ pop.width/2 < katch.getX() + katch.width/2-15) {
-                pop.handleCollisionKatch(240);
+            if (pop.getX()+ pop.width/2 < katch.getX() + katch.width/2-24) {
+                pop.handleCollisionKatch(225);
+            }
+            else if (pop.getX()+ pop.width/2 > katch.getX() + katch.width/2-24
+                    && pop.getX()+ pop.width/2 < katch.getX() + katch.width/2-8) {
+                         pop.handleCollisionKatch(255);
+            }
+            else if (pop.getX()+ pop.width/2 > katch.getX() + katch.width/2+8
+                    && pop.getX()+ pop.width/2 < katch.getX() + katch.width/2+24) {
+                         pop.handleCollisionKatch(285);
             }
             else if (pop.getX()+ pop.width/2 > katch.getX() + katch.width/2+15) {
-                pop.handleCollisionKatch(300);
+                pop.handleCollisionKatch(305);
             }
             else
                 pop.handleCollisionKatch(270);
         }
 
-        if (popRec.intersects(boarderLeft)||
-            popRec.intersects(boarderRight)) {
+        if (popRec.intersects(boarderLeft.x, boarderLeft.y, boarderLeft.width, boarderLeft.height)||
+            popRec.intersects(boarderRight.x, boarderRight.y, boarderRight.width, boarderRight.height)) {
 
             pop.handleCollisionX();
         }
-        if (popRec.intersects(boarderTop)){
+        if (popRec.intersects(boarderTop)) {
             pop.handleCollisionY();
         }
 
@@ -181,10 +222,13 @@ public class SecondGame extends JPanel {
             blocksRec = blocks.get(i).getRectangle();
 
             if (popRec.intersects(blocksRec)) {
-                
+
+                pop.handleCollisionY();
+
+                //if (blocks.get(i).getType() == 2) {
                 blocks.remove(i);
                 score += 100;
-                pop.handleCollisionY();
+                level--;
             }
         }
     }
@@ -194,7 +238,7 @@ public class SecondGame extends JPanel {
         SG.init();
 
         try {
-            while (true) {
+            while (!SG.isEndGame()) {
 
                 SG.katch.update();
                 SG.pop.update();

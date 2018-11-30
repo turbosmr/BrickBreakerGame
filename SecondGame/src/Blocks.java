@@ -1,11 +1,13 @@
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 
 public class Blocks extends GameObject {
 
-    private int x, y, height, width;
-    private int blockType;
+    private double x, y, height, width;
+    private double blockType;
 
-    public Blocks (Image img, int x, int y, int type)  {
+    public Blocks (Image img, double x, double y, double type)  {
 
         super(img, x, y);
         this.x = x;
@@ -15,11 +17,17 @@ public class Blocks extends GameObject {
         this.height = img.getHeight(null);
     }
 
-    public Rectangle getRectangle () {
-        return new Rectangle(x, y, width, height);
+    public double getType() {
+        return this.blockType;
+    }
+
+    public Rectangle2D.Double getRectangle () {
+        return new Rectangle2D.Double(x, y, width, height);
     }
 
     public void draw(Graphics2D g) {
-        g.drawImage(img, x, y, null);
+
+        AffineTransform rotation = AffineTransform.getTranslateInstance(x, y);
+        g.drawImage(this.img, rotation, null);
     }
 }

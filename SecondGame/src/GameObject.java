@@ -3,13 +3,13 @@ import java.awt.geom.Rectangle2D;
 
 public abstract class GameObject {
 
-    protected int x;
-    protected int y;
-    protected int height;
-    protected int width;
+    protected double x;
+    protected double y;
+    protected double  height;
+    protected double width;
     protected Image img;
 
-    public GameObject(Image img, int x, int y) {
+    public GameObject(Image img, double x, double y) {
 
         this.img = img;
         this.x = x;
@@ -18,19 +18,19 @@ public abstract class GameObject {
         this.width = img.getWidth(null);
     }
 
-    public int getX() {
+    public double getX() {
         return this.x;
     }
 
-    public int getY() {
+    public double getY() {
         return this.y;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return this.width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return this.height;
     }
 }
