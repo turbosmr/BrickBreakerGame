@@ -33,4 +33,5 @@ public abstract class GameObject {
     public double getHeight() {
         return this.height;
     }
+
 }

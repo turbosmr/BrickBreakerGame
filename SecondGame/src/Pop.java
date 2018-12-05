@@ -5,13 +5,15 @@ import java.awt.image.BufferedImage;
 
 public class Pop extends GameObject {
 
-    private double angle = 90, moveXDirection, moveYDirection, speed, directionX = 1, directionY = 1;
+    private SecondGame SG;
+    private double angle, moveXDirection, moveYDirection, speed, directionX = 1, directionY = -1;
     private double respawnX, respawnY, respawnAngle;
 
-    public Pop (double x, double y, BufferedImage img) {
+    public Pop (double x, double y, double speed, BufferedImage img) {
 
         super (img, x, y);
-        speed = 1.5;
+        this.speed = speed;
+        this.angle = 270;
         respawnX = x;
         respawnY = y;
         respawnAngle = angle;
@@ -41,11 +43,6 @@ public class Pop extends GameObject {
 
         directionY = directionY * -1;
 
-    }
-
-    public double getAngle () {
-
-        return this.angle;
     }
 
     public void handleCollisionY() {
