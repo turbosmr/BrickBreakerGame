@@ -26,6 +26,7 @@ public class Pop extends GameObject {
 
         x += directionX * moveXDirection;
         y += directionY * moveYDirection;
+
     }
 
     public Rectangle2D.Double getRectangle () {
@@ -53,6 +54,11 @@ public class Pop extends GameObject {
     public void handleCollisionX() {
 
         reverseX();
+    }
+
+    public void setSpeed(Double speed) {
+
+        this.speed = speed;
     }
 
     public void Respawn() {
