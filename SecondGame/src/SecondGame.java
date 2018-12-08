@@ -179,7 +179,7 @@ public class SecondGame extends JPanel {
 
     public int getLives () {
 
-        if (pop.getY() > 630){
+        if (pop.getY() > 1000){
 
             lives--;
             pop.Respawn();
@@ -206,10 +206,12 @@ public class SecondGame extends JPanel {
 
         return new Rectangle(0, 0, 43, 500);
     }
+
     public Rectangle getBoarderRight(){
 
         return new Rectangle(screenWidth-43, 0, 43, 500);
     }
+
     public Rectangle getBoarderTop() {
 
         return new Rectangle(0, 0, 640, 24);
@@ -223,34 +225,42 @@ public class SecondGame extends JPanel {
         boarderRight = getBoarderRight();
         boarderTop = getBoarderTop();
 
-        if (popRec.intersects(katchRec.x, katchRec.y, katchRec.width, katchRec.height)) {
+        if (popRec.intersects(katchRec)) {
 
-            if (pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 31) {
-                pop.handleCollisionKatch(205);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 31
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 22) {
-                pop.handleCollisionKatch(225);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 22
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 13) {
-                pop.handleCollisionKatch(240);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 13
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 4) {
-                pop.handleCollisionKatch(255);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 4
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 4) {
-                pop.handleCollisionKatch(270);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 4
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 13) {
-                pop.handleCollisionKatch(285);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 13
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 22) {
-                pop.handleCollisionKatch(300);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 22
-                    && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 31) {
-                pop.handleCollisionKatch(315);
-            } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 31) {
-                pop.handleCollisionKatch(335);
+            if ((pop.getY())<(katch.getY())) {
+
+                System.out.println("pop"+pop.getY());
+                System.out.println("katch"+(katch.getY()));
+
+                if (pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 31) {
+                    pop.handleCollisionKatch(205);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 31
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 22) {
+                    pop.handleCollisionKatch(225);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 22
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 13) {
+                    pop.handleCollisionKatch(240);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 13
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 4) {
+                    pop.handleCollisionKatch(255);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 4
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 4) {
+                    pop.handleCollisionKatch(270);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 4
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 13) {
+                    pop.handleCollisionKatch(285);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 13
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 22) {
+                    pop.handleCollisionKatch(300);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 22
+                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 31) {
+                    pop.handleCollisionKatch(315);
+                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 31) {
+                    pop.handleCollisionKatch(335);
+                }
             }
+            else
+                pop.handleCollisionX();
         }
         if (popRec.intersects(boarderLeft) || popRec.intersects(boarderRight)) {
             pop.handleCollisionX();
@@ -278,7 +288,7 @@ public class SecondGame extends JPanel {
 
     public void incrementLevel () {
 
-        if ( Bigleg == 0){
+        if ( Bigleg == 0) {
             level++;
             Nextlevel = true;
             this.speed += 0.3;

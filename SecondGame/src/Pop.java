@@ -5,7 +5,6 @@ import java.awt.image.BufferedImage;
 
 public class Pop extends GameObject {
 
-    private SecondGame SG;
     private double angle, moveXDirection, moveYDirection, speed, directionX = 1, directionY = -1;
     private double respawnX, respawnY, respawnAngle;
 
@@ -27,38 +26,25 @@ public class Pop extends GameObject {
         x += directionX * moveXDirection;
         y += directionY * moveYDirection;
 
-    }
-
-    public Rectangle2D.Double getRectangle () {
-
-        return new Rectangle2D.Double(x, y, width, height);
+        speed += 0.00002;
     }
 
     public void reverseX () {
-
         directionX = directionX * -1;
 
     }
 
     public void reverseY () {
-
         directionY = directionY * -1;
 
     }
 
     public void handleCollisionY() {
-
         reverseY();
     }
 
     public void handleCollisionX() {
-
         reverseX();
-    }
-
-    public void setSpeed(Double speed) {
-
-        this.speed = speed;
     }
 
     public void Respawn() {
@@ -70,10 +56,13 @@ public class Pop extends GameObject {
 
     public void handleCollisionKatch(double angle){
 
-        Rectangle2D.Double popRec = new Rectangle2D.Double();
         directionY = 1;
         directionX = 1;
         this.angle = angle;
+    }
+
+    public Rectangle2D.Double getRectangle () {
+        return new Rectangle2D.Double(x, y, width, height);
     }
 
     public void draw(Graphics2D g) {
