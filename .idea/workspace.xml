@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="csc413-secondgame-turbosmr:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecondGame/src/Pop.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/Pop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/deletemeafteraddingjarfile.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,12 +53,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14305" />
+          <entry key="java" value="14488" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14305" />
+          <entry key="JAVA" value="14488" />
         </counts>
       </usages-collector>
     </session>
@@ -59,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+            <state relative-caret-position="79">
+              <caret line="128" column="67" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6406#6407#0" expanded="true" />
@@ -84,12 +93,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Pop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="142">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#900#901#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
                 <element signature="e#1050#1051#0" expanded="true" />
                 <element signature="e#1076#1077#0" expanded="true" />
                 <element signature="e#1115#1116#0" expanded="true" />
@@ -117,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Katch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/SecondGame/src/Blocks.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="489">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#488#489#0" expanded="true" />
@@ -171,6 +182,9 @@
       <find>int</find>
       <find>input</find>
       <find>speed</find>
+      <find>System.out</find>
+      <find>sys</find>
+      <find>spee</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/SecondGame/Resources</dir>
@@ -214,7 +228,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
+    <option name="x" value="23" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="784" />
@@ -254,13 +268,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544385574123" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544399116622" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -325,15 +339,15 @@
       <workItem from="1542698298511" duration="12480000" />
       <workItem from="1542746845610" duration="100877000" />
       <workItem from="1544083959101" duration="15944000" />
-      <workItem from="1544138669026" duration="50813000" />
+      <workItem from="1544138669026" duration="60477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186565000" />
+    <option name="totallyTimeSpent" value="196229000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="23" width="1400" height="784" extended-state="0" />
+    <frame x="23" y="23" width="1400" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
@@ -396,7 +410,7 @@
     <entry file="file://$PROJECT_DIR$/SecondGame/src/Blocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#488#489#0" expanded="true" />
@@ -420,7 +434,7 @@
     <entry file="file://$PROJECT_DIR$/SecondGame/src/Katch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -439,12 +453,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SecondGame/src/Pop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="142">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
             <element signature="e#1050#1051#0" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
             <element signature="e#1115#1116#0" expanded="true" />
@@ -457,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+        <state relative-caret-position="79">
+          <caret line="128" column="67" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6406#6407#0" expanded="true" />
@@ -475,10 +491,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>csc413-secondgame-turbosmr:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -521,7 +539,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SecondGame</last-edited>
+          <last-edited>csc413-secondgame-turbosmr</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

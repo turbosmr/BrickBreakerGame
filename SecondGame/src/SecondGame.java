@@ -17,9 +17,8 @@ public class SecondGame extends JPanel {
     private InputStream blockMap;
     private BufferedReader bufferReader;
     private String input;
-    private Image wallImg, blockSolid, blockImg1, blockImg2, blockImg3, blockImg4;
+    private Image wallImg, blockSolid, blockImg1, blockImg2, blockImg3, blockImg4, blockImg5;
     private ArrayList<Blocks> blocks = new ArrayList<>();
-    private ArrayList<GameObject> gameObjects = new ArrayList<>();
     private Katch katch;
     private KatchControl katchControl;
     private Pop pop;
@@ -41,8 +40,9 @@ public class SecondGame extends JPanel {
             blockSolid = read(new File("Resources/Block_solid.gif"));
             blockImg1 = read(new File("Resources/Block1.gif"));
             blockImg2 = read(new File("Resources/Block2.gif"));
-            blockImg3 = read(new File("Resources/Block3.gif"));
-            blockImg4 = read(new File("Resources/Block3.gif"));
+            blockImg3 = read(new File("Resources/Block6.gif"));
+            blockImg4 = read(new File("Resources/Block4.gif"));
+            blockImg5 = read(new File("Resources/Block5.gif"));
             katchImg = read(new File("Resources/Katch1.gif"));
             bigleg = read(new File("Resources/Bigleg_small.gif"));
             popImg = read(new File("Resources/Pop1.gif"));
@@ -62,6 +62,7 @@ public class SecondGame extends JPanel {
         this.jf.setVisible(true);
 
         loadObjects();
+        incrementLevel();
     }
 
     private void loadObjects() {
@@ -74,7 +75,7 @@ public class SecondGame extends JPanel {
         double increaseSpeed = 0;
 
         for (double i = 0; i<level ; i++){
-            this.speed = 1.5+(increaseSpeed*0.2);
+            this.speed = 1.4 +(increaseSpeed*0.2);
             increaseSpeed++;
         }
         pop = new Pop(320-16, 300, speed, popImg);
@@ -86,11 +87,14 @@ public class SecondGame extends JPanel {
         g2.drawImage(world, 0, 0, this);
         buffer = world.createGraphics();
 
+        incrementLevel();
+
         g2.setColor(Color.white);
         g2.setFont(new Font("", Font.PLAIN, 20));
         g2.drawString("Level "+ level,screenWidth-580,screenHeight-65);
         g2.drawString("Score: "+ getScore(),screenWidth-580,screenHeight-40);
-        g2.drawString("lives: "+ getLives(),screenWidth-125,screenHeight-40);
+        g2.drawString("lives: "+ getLives(),screenWidth-130,screenHeight-40);
+        g2.drawString("Speed: "+ pop.getSpeed(),screenWidth-130,screenHeight-65);
 
         drawBackGround(buffer);
         drawBlocks();
@@ -98,7 +102,7 @@ public class SecondGame extends JPanel {
         katch.draw(buffer);
         pop.draw(buffer);
 
-        incrementLevel();
+
     }
 
     public void drawBackGround(Graphics2D buffer) {
@@ -122,7 +126,7 @@ public class SecondGame extends JPanel {
 
         try{
             if (level == 1){
-                blockMap = new FileInputStream("Resources/BlockMap.txt");
+                blockMap = new FileInputStream("Resources/BlockMap1.txt");
             }
             else if (level == 2){
                 blockMap = new FileInputStream("Resources/BlockMap2.txt");
@@ -144,28 +148,36 @@ public class SecondGame extends JPanel {
 
                 for (int i = 0; i < input.length(); i++) {
 
-                    if (input.charAt(i) == '1') {
+                    if (input.charAt(i) == 's') {
                         blocks.add(new Blocks(blockSolid, i * blockSolid.getWidth(null),
+                                j * blockSolid.getHeight(null), 10));
+                    }
+                    if (input.charAt(i) == '1') {
+                        blocks.add(new Blocks(blockImg1, i * blockSolid.getWidth(null),
                                 j * blockSolid.getHeight(null), 1));
                     }
                     if (input.charAt(i) == '2') {
-                        blocks.add(new Blocks(blockImg1, i * blockSolid.getWidth(null),
-                                j * blockSolid.getHeight(null), 2));
+                        blocks.add(new Blocks(blockImg2, i * blockImg2.getWidth(null),
+                                j * blockImg2.getHeight(null), 2));
                     }
                     if (input.charAt(i) == '3') {
-                        blocks.add(new Blocks(blockImg2, i * blockImg2.getWidth(null),
+                        blocks.add(new Blocks(blockImg3, i * blockImg2.getWidth(null),
                                 j * blockImg2.getHeight(null), 3));
                     }
                     if (input.charAt(i) == '4') {
-                        blocks.add(new Blocks(blockImg3, i * blockImg2.getWidth(null),
+                        blocks.add(new Blocks(blockImg4, i * blockImg2.getWidth(null),
                                 j * blockImg2.getHeight(null), 4));
                     }
                     if (input.charAt(i) == '5') {
-                        blocks.add(new Blocks(blockImg3, i * blockImg2.getWidth(null),
+                        blocks.add(new Blocks(blockImg5, i * blockImg2.getWidth(null),
+                                j * blockImg2.getHeight(null), 5));
+                    }
+                    if (input.charAt(i) == 'e') {
+                        blocks.add(new Blocks(blockImg5, i * blockImg2.getWidth(null),
                                 j * blockImg2.getHeight(null), 5));
                         Bigleg++;
                     }
-                    else if (input.charAt(i) == '6') {
+                    else if (input.charAt(i) == 'b') {
                         blocks.add(new Blocks(bigleg, i * bigleg.getWidth(null),
                                 j * blockImg2.getHeight(null), 6));
                         Bigleg++;
@@ -289,19 +301,24 @@ public class SecondGame extends JPanel {
 
                 if (blocks.get(i).getType() == 6) {
                     Bigleg--;
-                    score += 1000;
-                    System.out.println(Bigleg);
+                    score += 2500;
                 }
-                if (blocks.get(i).getType() == 2) {
+                if (blocks.get(i).getType() == 1) {
                     score += 100;
                 }
-                if (blocks.get(i).getType() == 3) {
+                if (blocks.get(i).getType() == 2) {
                     score += 200;
                 }
-                if (blocks.get(i).getType() == 4 ||blocks.get(i).getType() == 5) {
+                if (blocks.get(i).getType() == 3) {
                     score += 500;
                 }
-                if (!(blocks.get(i).getType() == 1)) {
+                if (blocks.get(i).getType() == 4) {
+                    score += 800;
+                }
+                if (blocks.get(i).getType() == 5) {
+                    score += 1000;
+                }
+                if (!(blocks.get(i).getType() == 10)) {
                 blocks.remove(i);
                 }
             }
@@ -350,6 +367,7 @@ public class SecondGame extends JPanel {
                     Thread.sleep(1000 / 144);
 
                     if (SG.Nextlevel == true) {
+
                         SG.loadObjects();
                         SG.Nextlevel = false;
                 }

@@ -28,13 +28,12 @@ public class Pop extends GameObject {
 
     }
 
-    public void setSpeed (double speed) {
-        this.speed = speed;
-    }
-
     public void incrementSpeed(){
         this.speed += .01;
-        System.out.println(speed);
+    }
+
+    public double getSpeed () {
+        return speed;
     }
 
     public void reverseX () {
