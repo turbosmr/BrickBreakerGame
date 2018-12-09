@@ -23,7 +23,7 @@ public class SecondGame extends JPanel {
     private Katch katch;
     private KatchControl katchControl;
     private Pop pop;
-    private double speed = 1.5;
+    private double speed = 0;
     private Rectangle2D.Double popRec;
     private Rectangle2D.Double blocksRec;
     private Rectangle2D.Double katchRec;
@@ -70,6 +70,13 @@ public class SecondGame extends JPanel {
         katch = new Katch(320-40, 450, 0, 0, 0, katchImg);
         katchControl = new KatchControl(katch, KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT);
         this.jf.addKeyListener(katchControl);
+
+        double increaseSpeed = 0;
+
+        for (double i = 0; i<level ; i++){
+            this.speed = 1.5+(increaseSpeed*0.2);
+            increaseSpeed++;
+        }
         pop = new Pop(320-16, 300, speed, popImg);
     }
 
@@ -234,6 +241,8 @@ public class SecondGame extends JPanel {
 
         if (popRec.intersects(katchRec)) {
 
+            pop.incrementSpeed();
+
             if ((pop.getY())<(katch.getY())) {
 
                 if (pop.getX() + pop.width/2 < katch.getX() + katch.width/2 - 31) {
@@ -306,7 +315,6 @@ public class SecondGame extends JPanel {
             blocks.clear();
             level++;
             Nextlevel = true;
-            this.speed += 0.3;
         }
         if (level == 5 && Bigleg == 1) {
 
