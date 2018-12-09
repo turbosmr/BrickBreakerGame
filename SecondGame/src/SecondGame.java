@@ -188,11 +188,18 @@ public class SecondGame extends JPanel {
 
             g2.setColor(Color.black);
             g2.setFont(new Font("", Font.PLAIN, 60));
-            g2.drawString("Game Over", screenWidth/2-150, screenHeight/2);
+            g2.drawString("Game Over", screenWidth/2-165, screenHeight/2);
             g2.setColor(Color.white);
             g2.setFont(new Font("", Font.PLAIN, 60));
-            g2.drawString("Game Over", screenWidth/2-148, screenHeight/2-2);
+            g2.drawString("Game Over", screenWidth/2-163, screenHeight/2-2);
+
+            g2.setColor(Color.black);
+            g2.setFont(new Font("", Font.PLAIN, 40));
+            g2.drawString("Your Score is "+getScore(), screenWidth/2-200, screenHeight/2+60);
+            g2.setColor(Color.white);
+            g2.drawString("Your Score is "+getScore(), screenWidth/2-198, screenHeight/2+58);
             g2.setFont(new Font("", Font.PLAIN, 20));
+
             endGame = true;
         }
         return lives;
@@ -300,7 +307,6 @@ public class SecondGame extends JPanel {
             level++;
             Nextlevel = true;
             this.speed += 0.3;
-
         }
         if (level == 5 && Bigleg == 1) {
 
