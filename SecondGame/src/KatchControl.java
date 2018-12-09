@@ -21,6 +21,7 @@ public class KatchControl implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent ke) {
+
         int keyPressed = ke.getKeyCode();
 
         if (keyPressed == left) {
@@ -35,6 +36,7 @@ public class KatchControl implements KeyListener {
     public void keyReleased(KeyEvent ke) {
 
         int keyReleased = ke.getKeyCode();
+
         if (keyReleased  == left) {
             this.katch.unToggleLeftPressed();
         }

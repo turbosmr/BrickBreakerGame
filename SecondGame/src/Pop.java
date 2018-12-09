@@ -26,7 +26,11 @@ public class Pop extends GameObject {
         x += directionX * moveXDirection;
         y += directionY * moveYDirection;
 
-        speed += 0.00002;
+        speed+= 0.00003;
+    }
+
+    public void setSpeed (double speed) {
+        this.speed = speed;
     }
 
     public void reverseX () {

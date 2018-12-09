@@ -31,7 +31,7 @@ public class SecondGame extends JPanel {
     private Rectangle boarderRight;
     private Rectangle boarderTop;
     private int score = 0, totalScore = 0, lives = 3, level = 1, Bigleg = 0;
-    private boolean endGame = false, Nextlevel = false, winGame = false;
+    private boolean endGame = false, Nextlevel = false;
 
     private void init () {
 
@@ -139,28 +139,28 @@ public class SecondGame extends JPanel {
 
                     if (input.charAt(i) == '1') {
                         blocks.add(new Blocks(blockSolid, i * blockSolid.getWidth(null),
-                                j * blockSolid.getHeight(null), 2));
+                                j * blockSolid.getHeight(null), 1));
                     }
                     if (input.charAt(i) == '2') {
                         blocks.add(new Blocks(blockImg1, i * blockSolid.getWidth(null),
-                                j * blockSolid.getHeight(null), 1));
+                                j * blockSolid.getHeight(null), 2));
                     }
                     if (input.charAt(i) == '3') {
                         blocks.add(new Blocks(blockImg2, i * blockImg2.getWidth(null),
-                                j * blockImg2.getHeight(null), 1));
+                                j * blockImg2.getHeight(null), 3));
                     }
                     if (input.charAt(i) == '4') {
                         blocks.add(new Blocks(blockImg3, i * blockImg2.getWidth(null),
-                                j * blockImg2.getHeight(null), 1));
+                                j * blockImg2.getHeight(null), 4));
                     }
-                    if (input.charAt(i) == '6') {
+                    if (input.charAt(i) == '5') {
                         blocks.add(new Blocks(blockImg3, i * blockImg2.getWidth(null),
-                                j * blockImg2.getHeight(null), 1));
+                                j * blockImg2.getHeight(null), 5));
                         Bigleg++;
                     }
-                    else if (input.charAt(i) == '5') {
+                    else if (input.charAt(i) == '6') {
                         blocks.add(new Blocks(bigleg, i * bigleg.getWidth(null),
-                                j * blockImg2.getHeight(null), 3));
+                                j * blockImg2.getHeight(null), 6));
                         Bigleg++;
                     }
                 }
@@ -229,33 +229,30 @@ public class SecondGame extends JPanel {
 
             if ((pop.getY())<(katch.getY())) {
 
-                System.out.println("pop"+pop.getY());
-                System.out.println("katch"+(katch.getY()));
-
-                if (pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 31) {
+                if (pop.getX() + pop.width/2 < katch.getX() + katch.width/2 - 31) {
                     pop.handleCollisionKatch(205);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 31
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 22) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 - 31
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 - 22) {
                     pop.handleCollisionKatch(225);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 22
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 13) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 - 22
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 - 13) {
                     pop.handleCollisionKatch(240);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 13
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 - 4) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 - 13
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 - 4) {
                     pop.handleCollisionKatch(255);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 - 4
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 4) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 - 4
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 + 4) {
                     pop.handleCollisionKatch(270);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 4
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 13) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 + 4
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 + 13) {
                     pop.handleCollisionKatch(285);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 13
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 22) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 + 13
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 + 22) {
                     pop.handleCollisionKatch(300);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 22
-                        && pop.getX() + pop.width / 2 < katch.getX() + katch.width / 2 + 31) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 + 22
+                        && pop.getX() + pop.width/2 < katch.getX() + katch.width/2 + 31) {
                     pop.handleCollisionKatch(315);
-                } else if (pop.getX() + pop.width / 2 > katch.getX() + katch.width / 2 + 31) {
+                } else if (pop.getX() + pop.width/2 > katch.getX() + katch.width/2 + 31) {
                     pop.handleCollisionKatch(335);
                 }
             }
@@ -274,13 +271,22 @@ public class SecondGame extends JPanel {
             if (popRec.intersects(blocksRec)) {
                 pop.handleCollisionY();
 
-                if (blocks.get(i).getType() == 3) {
+                if (blocks.get(i).getType() == 6) {
                     Bigleg--;
+                    score += 1000;
                     System.out.println(Bigleg);
                 }
-                if (!(blocks.get(i).getType() == 2)) {
+                if (blocks.get(i).getType() == 2) {
+                    score += 100;
+                }
+                if (blocks.get(i).getType() == 3) {
+                    score += 200;
+                }
+                if (blocks.get(i).getType() == 4 ||blocks.get(i).getType() == 5) {
+                    score += 500;
+                }
+                if (!(blocks.get(i).getType() == 1)) {
                 blocks.remove(i);
-                score += 100;
                 }
             }
         }
@@ -289,10 +295,12 @@ public class SecondGame extends JPanel {
     public void incrementLevel () {
 
         if ( Bigleg == 0) {
+
+            blocks.clear();
             level++;
             Nextlevel = true;
             this.speed += 0.3;
-            blocks.clear();
+
         }
         if (level == 5 && Bigleg == 1) {
 
@@ -302,7 +310,14 @@ public class SecondGame extends JPanel {
             g2.setColor(Color.white);
             g2.setFont(new Font("", Font.PLAIN, 60));
             g2.drawString("You Win!", screenWidth/2-123, screenHeight/2-2);
+
+            g2.setColor(Color.black);
+            g2.setFont(new Font("", Font.PLAIN, 40));
+            g2.drawString("Your Score is "+getScore(), screenWidth/2-200, screenHeight/2+60);
+            g2.setColor(Color.white);
+            g2.drawString("Your Score is "+getScore(), screenWidth/2-198, screenHeight/2+58);
             g2.setFont(new Font("", Font.PLAIN, 20));
+
             endGame = true;
         }
     }
