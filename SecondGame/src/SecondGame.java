@@ -62,7 +62,6 @@ public class SecondGame extends JPanel {
         this.jf.setVisible(true);
 
         loadObjects();
-        incrementLevel();
     }
 
     private void loadObjects() {
@@ -333,7 +332,7 @@ public class SecondGame extends JPanel {
             level++;
             Nextlevel = true;
         }
-        if (level == 5 && Bigleg == 1) {
+        if ((level == 5||level == 6) && Bigleg == 1) {
 
             g2.setColor(Color.black);
             g2.setFont(new Font("", Font.PLAIN, 60));
