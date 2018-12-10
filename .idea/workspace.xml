@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/Bigleg_small.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Bigleg_small.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/BlockMap4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/BlockMap5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/BlockMap5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/Katch1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Katch1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/Katch2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Katch2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/Resources/Pop1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Pop1.gif" afterDir="false" />
-    </list>
+    <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +260,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544414239544" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544462035183" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -340,18 +331,18 @@
       <workItem from="1542698298511" duration="12480000" />
       <workItem from="1542746845610" duration="100877000" />
       <workItem from="1544083959101" duration="15944000" />
-      <workItem from="1544138669026" duration="65733000" />
+      <workItem from="1544138669026" duration="65897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201485000" />
+    <option name="totallyTimeSpent" value="201649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="23" width="1400" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -360,7 +351,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32947975" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32658958" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32658958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39884394" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
