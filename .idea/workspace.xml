@@ -7,7 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/Bigleg_small.gif" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/Bigleg_small.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/Katch1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/Katch1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/Katch2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/Katch2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/Pop1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/Pop1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/Resources/Bigleg_small.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Bigleg_small.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/BlockMap4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/Resources/Katch1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Katch1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/Resources/Katch2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Katch2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar/Resources/Pop1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/jar/Resources/Pop1.gif" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
               <folding>
                 <element signature="e#6406#6407#0" expanded="true" />
                 <element signature="e#6447#6448#0" expanded="true" />
@@ -261,7 +271,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544403088647" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544407455988" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -332,12 +342,12 @@
       <workItem from="1542698298511" duration="12480000" />
       <workItem from="1542746845610" duration="100877000" />
       <workItem from="1544083959101" duration="15944000" />
-      <workItem from="1544138669026" duration="62033000" />
+      <workItem from="1544138669026" duration="62332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197785000" />
+    <option name="totallyTimeSpent" value="198084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="23" width="1400" height="784" extended-state="0" />
@@ -467,7 +477,7 @@
     <entry file="file://$PROJECT_DIR$/SecondGame/src/SecondGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
           <folding>
             <element signature="e#6406#6407#0" expanded="true" />
             <element signature="e#6447#6448#0" expanded="true" />
