@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/Resources/BlockMap5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/src/Pop.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/Pop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/SecondGame/src/SecondGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar/deletemeafteraddingjarfile.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="4fc53f86-102b-4bbd-afe1-0516662c1491" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +219,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
+    <option name="x" value="22" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="784" />
@@ -268,7 +259,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544399116622" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544400106644" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -339,15 +330,15 @@
       <workItem from="1542698298511" duration="12480000" />
       <workItem from="1542746845610" duration="100877000" />
       <workItem from="1544083959101" duration="15944000" />
-      <workItem from="1544138669026" duration="60477000" />
+      <workItem from="1544138669026" duration="60913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196229000" />
+    <option name="totallyTimeSpent" value="196665000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="23" width="1400" height="784" extended-state="0" />
+    <frame x="22" y="23" width="1400" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
