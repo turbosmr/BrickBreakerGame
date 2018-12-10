@@ -8,7 +8,7 @@ public class Katch extends GameObject{
 private double vx;
 private double vy;
 private double angle;
-private final double R = 2;
+private final double R = 2.2;
 private BufferedImage img;
 private boolean RightPressed;
 private boolean LeftPressed;
