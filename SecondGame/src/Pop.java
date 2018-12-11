@@ -29,7 +29,7 @@ public class Pop extends GameObject {
     }
 
     public void incrementSpeed(){
-        this.speed += .01;
+        this.speed += 0.01;
     }
 
     public double getSpeed () {

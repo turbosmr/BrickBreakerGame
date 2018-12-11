@@ -86,13 +86,11 @@ public class SecondGame extends JPanel {
         g2.drawImage(world, 0, 0, this);
         buffer = world.createGraphics();
 
-        incrementLevel();
-
         g2.setColor(Color.white);
         g2.setFont(new Font("", Font.PLAIN, 20));
-        g2.drawString("Level "+ level,screenWidth-580,screenHeight-65);
+        g2.drawString("Level "+ incrementLevel(g2),screenWidth-580,screenHeight-65);
         g2.drawString("Score: "+ getScore(),screenWidth-580,screenHeight-40);
-        g2.drawString("lives: "+ getLives(),screenWidth-130,screenHeight-40);
+        g2.drawString("lives: "+ getLives(g2),screenWidth-130,screenHeight-40);
         g2.drawString("Speed: "+ pop.getSpeed(),screenWidth-130,screenHeight-65);
 
         drawBackGround(buffer);
@@ -100,8 +98,6 @@ public class SecondGame extends JPanel {
 
         katch.draw(buffer);
         pop.draw(buffer);
-
-
     }
 
     public void drawBackGround(Graphics2D buffer) {
@@ -195,7 +191,7 @@ public class SecondGame extends JPanel {
         return score + totalScore;
     }
 
-    public int getLives () {
+    public int getLives (Graphics g2) {
 
         if (pop.getY() > 1000){
 
@@ -295,7 +291,7 @@ public class SecondGame extends JPanel {
         for (int i = 0; i <= blocks.size() - 1; i++) {
             blocksRec = blocks.get(i).getRectangle();
 
-            if (popRec.intersects(blocksRec)) {
+            if (popRec.intersects(blocksRec)&&!((blocks.get(i).getType())==10)) {
                 pop.handleCollisionY();
 
                 if (blocks.get(i).getType() == 6) {
@@ -324,7 +320,7 @@ public class SecondGame extends JPanel {
         }
     }
 
-    public void incrementLevel () {
+    public int incrementLevel (Graphics2D g2) {
 
         if ( Bigleg == 0) {
 
@@ -350,6 +346,7 @@ public class SecondGame extends JPanel {
 
             endGame = true;
         }
+        return level;
     }
     public static void main(String[] args) {
 

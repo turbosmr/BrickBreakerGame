@@ -4,14 +4,12 @@ import java.awt.geom.Rectangle2D;
 
 public class Blocks extends GameObject {
 
-    private double x, y, height, width;
+    private double height, width;
     private double blockType;
 
     public Blocks (Image img, double x, double y, double type)  {
 
         super(img, x, y);
-        this.x = x;
-        this.y = y;
         this.blockType = type;
         this.width = img.getWidth(null);
         this.height = img.getHeight(null);
