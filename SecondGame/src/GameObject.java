@@ -5,7 +5,7 @@ public abstract class GameObject {
 
     protected double x;
     protected double y;
-    protected double  height;
+    protected double height;
     protected double width;
     protected Image img;
 

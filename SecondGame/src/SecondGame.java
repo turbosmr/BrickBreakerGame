@@ -63,7 +63,11 @@ public class SecondGame extends JPanel {
 
         loadObjects();
     }
-
+    /* loads all of the game objects that need to be reloaded for each level. These need to be
+     * separated from the JFrame so that the JFrame doesn't get redrawn. The separation is only
+     * needed because when you move the frame from the original spot, it will draw the new level
+     * at where the original spot and you will have multiple JFrames displayed. The for loop
+     * increases the speed for each level. */
     private void loadObjects() {
 
         blockMaker();
@@ -73,13 +77,14 @@ public class SecondGame extends JPanel {
 
         double increaseSpeed = 0;
 
-        for (double i = 0; i<level ; i++){
-            this.speed = 1.4 +(increaseSpeed*0.2);
+        for (double i = 0; i < level ; i++){
+            this.speed = 1.4 +(increaseSpeed * 0.2);
             increaseSpeed++;
         }
         pop = new Pop(320-16, 300, speed, popImg);
     }
-
+    /* draws all of the objects in the game as well as the level, score, lives and speed at the
+     * bottom of the screen */
     public void paintComponent(Graphics g) {
 
         g2 = (Graphics2D) g;
@@ -99,14 +104,14 @@ public class SecondGame extends JPanel {
         katch.draw(buffer);
         pop.draw(buffer);
     }
-
+    /* Draws the background for the game */
     public void drawBackGround(Graphics2D buffer) {
 
         int Width = background.getWidth();
         int Height = background.getHeight();
         buffer.drawImage(background, 0, 0, Width, Height, this);
     }
-
+    /* Draws the coral defense on the screen*/
     public void drawBlocks() {
 
         if (!blocks.isEmpty()) {
@@ -116,7 +121,10 @@ public class SecondGame extends JPanel {
             }
         }
     }
-
+    /* loads the coral defense and the Biglegs into the Blocks class. It also loads a different
+     * map for each level and keeps track of how many Biglegs are on the screen. for the last
+     * level, I needed to and an extra Bigleg because of a bug that wouldn't load the "You Win"
+     * screen if the Biglegs == 0. I labeled the extra Bigleg "e" in the text map. */
     public void blockMaker() {
 
         try{
@@ -190,7 +198,7 @@ public class SecondGame extends JPanel {
     public int getScore() {
         return score + totalScore;
     }
-
+    /* draws the game over screen and decreases lives each time Pop falls off the screen.*/
     public int getLives (Graphics g2) {
 
         if (pop.getY() > 1000){
@@ -237,7 +245,9 @@ public class SecondGame extends JPanel {
 
         return new Rectangle(0, 0, 640, 24);
     }
-
+    /* checks all the collisons for the game. When Pop intersects with Katch there are 9 if
+     * and if else statements that passes in different angles in which Pop will bounce back up at.
+     * It also sets the score for each type of coral defense is hit as well as the Biglegs. */
     public void checkCollisions() {
 
         popRec = pop.getRectangle();
@@ -319,7 +329,7 @@ public class SecondGame extends JPanel {
             }
         }
     }
-
+    /* increments the levels and draws the "You Win" screen with the score*/
     public int incrementLevel (Graphics2D g2) {
 
         if ( Bigleg == 0) {

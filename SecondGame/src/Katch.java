@@ -20,7 +20,6 @@ private boolean LeftPressed;
         this.vy = vy;
         this.img = img;
         this.angle = angle;
-
         }
 
         void toggleRightPressed() {
@@ -48,7 +47,7 @@ private boolean LeftPressed;
             this.moveRight();
         }
     }
-
+    /* moves Katch right */
     private void moveRight() {
 
         vx = (R * Math.cos(Math.toRadians(angle)));
@@ -57,7 +56,7 @@ private boolean LeftPressed;
         y -= vy;
         checkBorder();
     }
-
+    /* moves Katch left */
     private void moveLeft() {
 
         vx = (R * Math.cos(Math.toRadians(angle)));
@@ -66,7 +65,7 @@ private boolean LeftPressed;
         y += vy;
         checkBorder();
     }
-
+    /* makes sure Katch doesn't go past the side boarders of the game. */
     private void checkBorder() {
 
         if (x < 40) {
@@ -82,12 +81,12 @@ private boolean LeftPressed;
         y = SecondGame.screenHeight - 10;
         }
     }
-
+    /* Creates the rectangle for collisions. the Rectangle2D method gives a more precised rectangle by
+     * using doubles */
     public Rectangle2D.Double getRectangle () {
-
         return new Rectangle2D.Double(x, y, width, height);
     }
-
+    /* draws Katch on the screen. The AffineTransformation is needed to use the doubles for precision */
     public void draw(Graphics2D g) {
 
         AffineTransform rotation = AffineTransform.getTranslateInstance(x, y);
