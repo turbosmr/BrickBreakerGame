@@ -3,6 +3,13 @@
 ## Student Name :Steve Rentschler
 ## Student ID :916188083
 
+IDE: IntelliJ
+
+Java Version: 1.8.0_152
+
+Working Directory: csc413-secondgame-turbosmr/
+
+
 Super Rainbow Reef
 
 How to play the game:
