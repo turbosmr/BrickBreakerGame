@@ -23,6 +23,6 @@ How to play the game:
 
 Katch controls:
 
-Left arrow: Moves Katch left
-Right arrow: Moves Katch right
+- Left arrow: Moves Katch left
+- Right arrow: Moves Katch right
 
