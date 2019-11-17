@@ -1,7 +1,4 @@
-# csc413-SecondGame
-
-## Student Name :Steve Rentschler
-## Student ID :916188083
+# csc413-BrickBreakerGame
 
 IDE: IntelliJ
 
