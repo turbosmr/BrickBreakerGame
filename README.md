@@ -4,7 +4,7 @@ IDE: IntelliJ
 
 Java Version: 1.8.0_152
 
-Working Directory: csc413-secondgame-turbosmr/
+Working Directory: https://github.com/turbosmr/BrickBreakerGame
 
 
 Super Rainbow Reef
