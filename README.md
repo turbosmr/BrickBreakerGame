@@ -1,13 +1,19 @@
 # csc413-BrickBreakerGame
 
 IDE: IntelliJ
-
 Java Version: 1.8.0_152
 
-Working Directory: https://github.com/turbosmr/BrickBreakerGame
+## Demo 
 
+Here's a demo of my Tank Game:
 
-Super Rainbow Reef
+<img src='https://media.giphy.com/media/ZCYNRQ6vWJziDoG1NW/giphy.gif' width='' alt='Video Walkthrough' />
+
+GIF created with [giphy](https://giphy.com).
+
+## About:
+
+This was my second game project for my CSC 613 at SFSU. I reused a lot of the same code from my first gamee. It was also coded in Java, using OOP.
 
 How to play the game:
 
