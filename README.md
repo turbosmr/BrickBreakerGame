@@ -1,8 +1,10 @@
 # csc413-BrickBreakerGame
 
-IDE: IntelliJ
+By: **Steve Rentschler**
 
-Java Version: 1.8.0_152
+IDE: **IntelliJ**
+
+Java Version: **1.8.0_152**
 
 ## Demo 
 
