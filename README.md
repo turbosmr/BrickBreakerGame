@@ -1,4 +1,4 @@
-# csc413-BrickBreakerGame
+# Brick Breaker Game
 
 By: **Steve Rentschler**
 
