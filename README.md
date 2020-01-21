@@ -13,7 +13,7 @@ GIF created with [giphy](https://giphy.com).
 
 ## About:
 
-This was my first game project for my CSC 613 at SFSU. It was coded in Java, using OOP.
+This was my second game project for my CSC 613 at SFSU. It was coded in Java, using OOP. I reused a lot of the code from my first game project.
 
 How to play the game:
 
