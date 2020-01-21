@@ -6,8 +6,6 @@ Java Version: 1.8.0_152
 
 ## Demo 
 
-Here's a demo of my Tank Game:
-
 <img src='https://media.giphy.com/media/jUzczjUQDShWAcWOX3/giphy.gif' width='' alt='Video Walkthrough' />
 
 GIF created with [giphy](https://giphy.com).
