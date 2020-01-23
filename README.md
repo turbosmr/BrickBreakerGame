@@ -32,8 +32,8 @@ How to play the game:
 * There are five level to complete. Levels are completed each time Pop destroys all of the Biglegs on the screen. After all of the Biglegs are destroyed, the game is over and you win.
 * At the bottom of the screen there is a display for the score, current level, current lives of Pop, and the speed of Pop.
 
-Katch controls:
+***Katch controls:***
 
-* Left arrow: Moves Katch left
-* Right arrow: Moves Katch right
+- Left arrow: Moves Katch left
+- Right arrow: Moves Katch right
 
